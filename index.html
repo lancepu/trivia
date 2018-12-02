@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="asset/image/favicon-LP.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="asset/css/main.css" />
+    <script src="asset/js/func.js"></script>
+    <script src="asset/js/game.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid gameArea">
+        <div class="row text-center">
+            <div class="col-12">
+                <h1 class="triviaQuestion"></h1>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="triviaAnswer"></h2>
+            </div>
+        </div>
+        <div class="row text-center scoreBoard">
+            <div class="col-md-4">
+                <h3 class="correct">Correct: </h3>
+                <h3 class="correct correctCount"></h3>
+            </div>
+            <div class="col-md-4">
+                <h3>Time Remaining: </h3>
+                <h3 class="countDownTimer"></h3>
+            </div>
+            <div class="col-md-4">
+                <h3 class="incorrect">Incorrect: </h3>
+                <h3 class="incorrect incorrectCount"></h3>
+            </div>
+        </div>
+        <div class="row triviaOption">
+            <!-- added by game.js -->
+        </div>
+        <div class="row text-center triviaButton">
+            <button type="button" class="btn  btn-success restartGame">Restart</button>
+            <button type="button" class="btn  btn-success checkAnswer">Check Answer</button>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg triviaModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="row text-center">
+                    <div class="col-12 modalCol">
+                        <h1>Welcome to the Trivia Game!</h1>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12 modalCol">
+                        <h5>You can customize your game below, or simply press start to get a random 10-question trivia</h5>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="questionQuantity">Number of Questions:</label>
+                        <input type="number" class="form-control" name="quantity" min="1" max="50" required pattern="[0-9]"
+                            value="10" id="questionQuantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="questionCategory">Question Category:</label>
+                        <select class="form-control" id="questionCategory">
+                            <option value="any">Any Category</option>
+                            <!-- added by game.js -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questionDifficulty">Question Difficulty:</label>
+                        <select class="form-control" id="questionDifficulty">
+                            <option value="any">Any Difficulty</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questionType">Question Type:</label>
+                        <select class="form-control" id="questionType">
+                            <option value="any">Any Type</option>
+                            <option value="multiple">Multiple Choice</option>
+                            <option value="boolean">True or False</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="row text-center">
+                    <div class="col-12 modalButton">
+                        <button type="button" class="btn btn-success getData">Start Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

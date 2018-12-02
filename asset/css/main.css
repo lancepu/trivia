@@ -1,0 +1,97 @@
+body {
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+.gameArea {
+  margin: 5%;
+  background-image: url("../image/background.jpg");
+  background-size: cover;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-height: 70vh;
+  width: auto;
+}
+
+.form-check-input {
+  height: 0.5em;
+  width: 0.5em;
+  margin-top: 0.5em;
+  font-size: 1.5rem;
+}
+
+.row {
+  margin: 0.5rem;
+}
+
+.triviaAnswer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: yellow;
+  text-shadow: 0 0 3px black;
+}
+
+.modal-content {
+  background-color: blue;
+  padding: 3rem;
+}
+
+input[type="radio"]:checked + label {
+  color: greenyellow;
+}
+
+input[type="radio"]:hover + label {
+  border: 3px solid greenyellow;
+}
+
+.correct {
+  color: greenyellow;
+}
+
+.incorrect {
+  color: red;
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-size: 0.9rem;
+  }
+  .form-check-input {
+    font-size: 0.9rem;
+  }
+  h4 {
+    font-size: 0.7rem;
+  }
+  h5 {
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  .form-check-input {
+    font-size: 0.9rem;
+  }
+  h4 {
+    font-size: 0.8rem;
+  }
+  h5 {
+    font-size: 0.6rem;
+  }
+}
